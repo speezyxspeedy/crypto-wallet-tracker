@@ -2,7 +2,13 @@ import urllib.request
 import json
 from datetime import datetime
 
-API_KEY = "9RH659DW43IVKZA26VKTAZVZWMQ52M5G3V"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
+
 
 WALLET = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
 
