@@ -4,9 +4,13 @@ import json
 import time
 from datetime import datetime
 
-API_KEY = "9RH659DW43IVKZA26VKTAZVZWMQ52M5G3V"
-ETHERSCAN_API_KEY = API_KEY
-TELEGRAM_BOT_TOKEN = "8983156271:AAERZzcxtQVvN2-riKGWK4-mxl3zlEodmUM"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 LAST_UPDATE_ID = 0
 WATCHED_WALLETS = {}   # chat_id -> wallet
